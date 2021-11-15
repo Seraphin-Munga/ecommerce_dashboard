@@ -1,0 +1,48 @@
+@import "../../../../assets/styling/app-color.scss";
+
+mat-drawer-container {
+  height: 100vh;
+}
+
+mat-drawer {
+  width: 246px;
+  background-color: $primary-color-one;
+}
+
+.avatar {
+  font-size: 40px;
+  color: $primary-color-six;
+  margin-top: -10px;
+}
+
+.nav.active {
+  mat-icon {
+    color: $primary-color-six;
+  }
+  span {
+    color: $primary-color-six !important;
+  }
+}
+
+h4 {
+  color: $primary-color-three;
+  margin-top: 10px !important;
+  margin-left: -70px;
+}
+
+.menu {
+  list-style: none;
+  margin-top: 45px;
+}
+
+li {
+  padding-bottom: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+span {
+  padding-left: 14px;
+  position: absolute;
+  color: $primary-color-three;
+}

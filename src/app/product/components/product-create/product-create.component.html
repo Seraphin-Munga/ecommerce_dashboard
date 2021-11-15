@@ -1,0 +1,64 @@
+<div class="container">
+
+    <form [formGroup]="form">
+        <div class="btn-group">
+            <button (click)="save()" class="btn-save" mat-button color="primary">
+                <mat-icon>save</mat-icon>
+                SAVE
+            </button>
+        </div>
+        <mat-card>
+            <div nz-row>
+                <div nz-col nzSpan="8">
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Name*</mat-label>
+                            <input formControlName="productName" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Quantity*</mat-label>
+                            <input formControlName="quantity" matInput>
+                        </mat-form-field>
+                    </div> -->
+
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Price*</mat-label>
+                            <input formControlName="price" type="number" matInput>
+                        </mat-form-field>
+                    </div>
+
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Description*</mat-label>
+                            <textarea formControlName="description" cols="8" matInput></textarea>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div nz-col nzSpan="8" nzOffset="8">
+                    <div class="clearfix">
+                        <nz-upload nzType="drag" [nzBeforeUpload]="beforeUpload" [nzMultiple]="false"
+                            (nzChange)="handleChange($event)">
+                            <p class="ant-upload-drag-icon">
+                                <!-- <img src="../../../assets/icons/fileUpload.svg" alt=""> -->
+                                <!-- <mat-icon class="cloud_download">cloud_download</mat-icon> -->
+                            </p>
+                            <p class="ant-upload-text">Click <a>here </a> to upload</p>
+                            <p class="ant-upload-hint">
+                                a Flat File.
+                            </p>
+                        </nz-upload>
+                    </div>
+                </div>
+            </div>
+
+        </mat-card>
+
+
+    </form>
+
+
+</div>

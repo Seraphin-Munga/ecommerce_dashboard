@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="btn-create">
+        <button class="btn-add" routerLink="/product/products/create" mat-button color="primary">
+            <mat-icon>add</mat-icon>
+            CREATE
+        </button>
+    </div>
+    <table mat-table [dataSource]="products" class="mat-elevation-z8">
+        <ng-container matColumnDef="productName">
+            <th mat-header-cell *matHeaderCellDef>Product Name</th>
+            <td mat-cell *matCellDef="let element">{{ element._product_productName }}</td>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef>Quantity</th>
+            <td mat-cell *matCellDef="let element">{{ element._product_quantity }}</td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let element">{{ element._product_price }}</td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-flat-button color="warn">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</div>

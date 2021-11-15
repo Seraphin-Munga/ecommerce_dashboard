@@ -1,0 +1,48 @@
+@import "../../../../assets/styling/app-color.scss";
+
+.container-table {
+  width: 98%;
+  margin: auto;
+  background-color: $primary-color-three;
+}
+
+mat-card {
+  width: 98%;
+  cursor: pointer;
+  height: 162px;
+}
+
+.local_mall {
+  color: $primary-color-four;
+}
+
+mat-icon {
+  font-size: 53px;
+}
+
+.people {
+  color: $primary-color-five;
+}
+
+.delivery_dining {
+  color: $primary-color-six;
+}
+
+mat-grid-tile {
+  width: 311px;
+}
+h1 {
+  position: relative;
+  top: 20px;
+}
+
+.user-icon {
+  font-size: 60px;
+}
+
+span {
+  float: right;
+  font-size: 20px;
+  font-weight: 400;
+  color: $primary-color-seven;
+}

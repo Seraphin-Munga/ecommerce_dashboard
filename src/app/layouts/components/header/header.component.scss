@@ -1,0 +1,29 @@
+@import "../../../../assets/styling/app-color.scss";
+
+.conttainer {
+  position: relative;
+  width: 100%;
+}
+.inner-container {
+  float: right;
+}
+
+span {
+  position: relative;
+  top: -5px;
+  font-size: 20px;
+}
+
+.mat-icon {
+  margin-right: 33px;
+  font-size: 30px;
+}
+
+mat-toolbar {
+  background-color: $hearder-color !important;
+  box-shadow: 0 6px 13px -4px rgb(0 0 0 / 25%);
+}
+
+mat-icon {
+  cursor: pointer;
+}

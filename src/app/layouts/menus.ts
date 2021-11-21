@@ -18,6 +18,6 @@ export const menus = [
     {
         text: "ORDER",
         icon: "border_outer",
-        path: "ORDER"
+        path: "/order/orders"
     }
 ]

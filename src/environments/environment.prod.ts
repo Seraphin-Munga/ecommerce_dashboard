@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  serverApiUrl: 'http://compaign-002-site2.dtempurl.com/api/',
+  serverApiUrl: 'https://localhost:5001/api/',
   cookieDomain: '',
 };

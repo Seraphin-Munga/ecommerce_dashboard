@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverApiUrl: 'http://compaign-002-site2.dtempurl.com/api/',
+  serverApiUrl: 'https://localhost:5001/api/',
   cookieDomain: '',
   url: '',
 };

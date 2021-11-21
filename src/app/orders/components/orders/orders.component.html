@@ -1,0 +1,32 @@
+<div class="container">
+    <table mat-table [dataSource]="orsers" class="mat-elevation-z8">
+        <ng-container matColumnDef="_order_orderDate">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let element">{{ element._order_orderDate }}</td>
+        </ng-container>
+        <ng-container matColumnDef="_order_quatity">
+            <th mat-header-cell *matHeaderCellDef>Quantity</th>
+            <td mat-cell *matCellDef="let element">{{ element._order_quatity }}</td>
+        </ng-container>
+        <ng-container matColumnDef="_order_totalPrice">
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let element">{{ element._order_totalPrice }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="_order_orderNumber">
+            <th mat-header-cell *matHeaderCellDef>Order Number</th>
+            <td mat-cell *matCellDef="let element">{{ element._order_orderNumber }}</td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+                <button (click)="view(element)" mat-flat-button color="warn">
+                    <mat-icon>view</mat-icon>
+                    View
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</div>

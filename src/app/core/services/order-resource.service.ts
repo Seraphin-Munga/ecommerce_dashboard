@@ -31,11 +31,11 @@ export class OrderResourceService {
     }
   }
 
-  public async orderItems(orderID: string): Promise<Array<OrderItemsRetrievalModel>> {
+  public async orderItems(orderID: string, customerID: string): Promise<OrderItemsRetrievalModel> {
     try {
       const response = await this._http
-        .get<Array<OrderItemsRetrievalModel>>(
-          `${environment.serverApiUrl}Order/${orderID}`
+        .get<OrderItemsRetrievalModel>(
+          `${environment.serverApiUrl}Order/${orderID}/${customerID}`
         )
         .toPromise();
       return response;

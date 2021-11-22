@@ -12,7 +12,7 @@ import { OrderResourceService } from "src/app/core/services/order-resource.servi
 export class OrderItemsComponent implements OnInit {
   public order!: any;
   public orderCustomerDetail!: any
-  public orderItems: Array<OrderItemsRetrievalModel> = [];
+  public orderItems!: OrderItemsRetrievalModel;
   public displayedColumns: string[] = [
     "_product_productName",
     "_product_price",
@@ -33,7 +33,7 @@ export class OrderItemsComponent implements OnInit {
     this.orderCustomerDetail = this.order.data;
   }
 
-  public async getOrderItems(): Promise<Array<OrderItemsRetrievalModel>> {
-    return this._orderResourceService.orderItems(this.order.data._order_orderID);
+  public async getOrderItems(): Promise<OrderItemsRetrievalModel> {
+    return this._orderResourceService.orderItems(this.order.data._order_orderID, this.order.data._order_customerID);
   }
 }

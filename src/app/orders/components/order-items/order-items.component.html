@@ -2,18 +2,18 @@
     <h1>CUSTOMER IFORMATTION</h1>
 
     <mat-card>
-        <div>First Name: {{ orderCustomerDetail._user_firstName }}</div>
+        <div>First Name: {{ orderItems.customerDetail._user_firstName }}</div>
 
-        <div>Last Name: {{ orderCustomerDetail._user_lastName }}</div>
+        <div>Last Name: {{ orderItems.customerDetail._user_lastName }}</div>
 
-        <div>Telephone: {{ orderCustomerDetail._user_telephone }}</div>
+        <div>Telephone: {{ orderItems.customerDetail._user_telephone }}</div>
 
-        <div>Email: {{ orderCustomerDetail._user_email }}</div>
+        <div>Email: {{ orderItems.customerDetail._user_email }}</div>
     </mat-card>
 </div>
 
 <div class="container">
-    <table mat-table [dataSource]="orderItems" class="mat-elevation-z8">
+    <table mat-table [dataSource]="orderItems.orderItems" class="mat-elevation-z8">
         <ng-container matColumnDef="_product_productName">
             <th mat-header-cell *matHeaderCellDef>Date</th>
             <td mat-cell *matCellDef="let element">
